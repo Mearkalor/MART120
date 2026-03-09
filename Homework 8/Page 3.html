@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Page 3</title>
+<h1>Contact</h1>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<style>
+body {
+    background-image: url("images/paper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;      
+    background-attachment: fixed;
+}
+</style>
+
+<script>
+function validateForm(){
+
+    var name = document.getElementById("fName");
+    var email = document.getElementById("lName");
+    var yes = document.getElementById("yes");
+    var no = document.getElementById("no");
+
+    name.style.border = "";
+    email.style.border = "";
+
+    if(name.value == ""){
+        name.style.border = "3px solid red";
+        name.focus();
+        return false;
+    }
+
+    if(email.value == ""){
+        email.style.border = "3px solid red";
+        return false;
+    }
+
+    if(!yes.checked || no.checked){
+        alert("You must agree to the Terms of Service.");
+        return false;
+    }
+
+    return true;
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Get in Contact</h2>
+
+<form action="Page 3.html" method="post" onsubmit="return validateForm()">
+
+Name: <input type="text" id="fName"><br>
+Email: <input type="text" id="lName"><br>
+<br>
+
+<h3>Do you agree to the terms of service?</h3>
+
+<input type="checkbox" id="yes"> Yes<br>
+<br>
+<button type="submit" class="btn btn-primary">Submit Info</button>
+</form>
+<br>
+
+<p><a href="Page 1.html">Go to Page 1</a></p>
+<p><a href="Page 2.html">Go to Short Story</a></p>
+
+</body>
+</html>
